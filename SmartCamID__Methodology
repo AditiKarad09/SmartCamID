@@ -1,0 +1,17 @@
+digraph SmartCamID {
+	rankdir=TB size="5,7"
+	Input [label="Camera Input
+(Laptop & iPhone)" color=lightblue shape=ellipse style=filled]
+	Capture [label="Feed Capture
+(Real-Time Video)" color=lightgreen shape=box style=filled]
+	Encryption [label="Metadata Encryption
+(Source Identification)" color=lightyellow shape=box style=filled]
+	Overlay [label="Metadata Overlay
+on Video Frames" color=lightpink shape=box style=filled]
+	Output [label="Streaming Output
+(OBS Studio)" color=lightcoral shape=ellipse style=filled]
+	Input -> Capture [label="Multi-Camera Setup"]
+	Capture -> Encryption [label="Process Live Feed"]
+	Encryption -> Overlay [label="Embed Metadata"]
+	Overlay -> Output [label="Stream to Platforms"]
+}

@@ -1,0 +1,18 @@
+digraph "SmartCamID Pipeline" {
+	Inputs [label="Camera Inputs
+- Laptop Camera
+- iPhone Camera (Continuity Camera)"]
+	Processing [label="Processing Stage
+- Capture Feeds
+- Metadata Encryption
+- Embed Metadata"]
+	Output [label="Output Preparation
+- Virtual Camera (PyVirtualCam)
+- Display Capture"]
+	Targets [label="Streaming Targets
+- YouTube (High Resolution)
+- Zoom (Low Latency)"]
+	Inputs -> Processing
+	Processing -> Output
+	Output -> Targets
+}
